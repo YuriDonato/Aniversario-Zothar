@@ -1,0 +1,65 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+
+    &--meet {
+        background-image: linear-gradient(variables.$ColorViridian,variables.$ColorAspargus);
+    }
+
+    &--location {
+        background-image: linear-gradient(variables.$ColorAspargus,variables.$ColoarAsh_gray);
+    }
+
+    &--ticket {
+        color: black;
+        background-image: linear-gradient(variables.$ColoarAsh_gray,variables.$ColorLavender);
+    }
+
+    &--date {
+        background-image: linear-gradient(variables.$ColorLavender,variables.$ColorMagnolia);
+    }
+
+    &--image-left{
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container{
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image{
+        max-width: 360px;
+    }
+
+    &__detail{
+        &__title{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description{
+            line-height: 22px;
+        }
+    }
+    @media (max-width: 640px){
+        .container{
+            display: block;
+        }
+
+        &__image{
+            width: 100%;
+        }
+
+        &__detail{
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+    }
+
+}
